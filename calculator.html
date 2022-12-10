@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- LINK-FOR-FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <!-- link-for-css -->
+    <link rel="stylesheet" href="./calculator.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>CALCULATOR</h1>
+        <div class="calculator">
+            <input type="text" name="screen" id="screen">
+            <table>
+                <tr>
+                    <td><button class="btn">(</button></td>
+                    <td><button class="btn">)</button></td>
+                    <td><button class="btn">C</button></td>
+                    <td><button class="btn">%</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn">7</button></td>
+                    <td><button class="btn">8</button></td>
+                    <td><button class="btn">9</button></td>
+                    <td><button class="btn">X</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn">4</button></td>
+                    <td><button class="btn">5</button></td>
+                    <td><button class="btn">6</button></td>
+                    <td><button class="btn">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn">1</button></td>
+                    <td><button class="btn">2</button></td>
+                    <td><button class="btn">3</button></td>
+                    <td><button class="btn">+</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn">0</button></td>
+                    <td><button class="btn">.</button></td>
+                    <td><button class="btn">/</button></td>
+                    <td><button class="btn">=</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        let screen = document.getElementById('screen');
+        buttons = document.getElementsByClassName('btn')
+        let screenValue = '';//This is a string
+        for (item of buttons) {
+            item.addEventListener('click', (e) => {
+                buttonText = e.target.innerText;
+                console.log("Button text is ", buttonText)
+
+                if (buttonText == 'X') {
+                    buttonText = '*'
+                    // screenValue is a variable
+                    screenValue += buttonText
+                    // screen.value is a value of a screen
+                    screen.value = screenValue;
+                }
+                else if (buttonText == 'C') {
+                    // screenValue is a variable
+                    screenValue = "";
+                    // screen.value is a value of a screen
+                    screen.value = screenValue;
+
+                }
+                else if (buttonText == '=') {
+                    //eval is a function in a javasceipt
+                    screen.value = eval(screenValue);
+
+                }
+                else {
+                    // screenValue is a variable
+                    screenValue += buttonText
+                    // screen.value is a value of a screen
+                    screen.value = screenValue;
+                }
+            })
+
+        }
+
+    </script>
+</body>
+
+</html>

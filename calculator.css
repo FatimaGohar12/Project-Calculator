@@ -1,0 +1,42 @@
+.container {
+    text-align: center;
+
+}
+
+.container h1 {
+    font-family: 'Lato', sans-serif;
+
+}
+
+.calculator {
+    background-color: rgb(234, 174, 227);
+    display: inline-block;
+    padding: 21px;
+    border-radius: 33px;
+    border: 3px solid rgb(112, 3, 83);
+
+}
+
+table {
+    margin: auto;
+
+}
+
+input {
+    width: 97%;
+    height: 64px;
+    border: 2px solid black;
+    border-radius: 14px;
+    font-size: 2rem;
+}
+
+.btn {
+    width: 112px;
+    height: 67px;
+    border-radius: 16px;
+    font-size: 37px;
+    font-weight: bold;
+    background-color: rgb(225, 222, 222);
+    border: 3px solid rgb(112, 3, 83);
+
+}
